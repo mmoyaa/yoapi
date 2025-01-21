@@ -1,22 +1,19 @@
 <div class="card">
     
     <div class="card-body">
+        <!-- el formuser es el nombre del grupo de controladores del ts  -->
 <form [formGroup]="formUser"  (ngSubmit)="procesar()">
         <div class="mb-2">
             <label for="form-label">
                 nombre
             </label>
-            <input type="text" formControlName= "name" class="form-control" placeholder="ingresa nombre">
-            
-        
+            <!-- //TODO:eñ formcontrolname tiene el nombre del controlador del ts -->
+            <input type="text" formControlName= "name" class="form-control" placeholder="ingresa nombre">  
         <div class="alert alert-danger mb-2" [hidden]="name.valid || email.pristine">
                 campo obligatorio
-        </div>
-         
-        
-        </div>
-<br>
-        
+        </div> 
+     </div>
+<br>  
         <div class="mb-2">
             <label for="form-label">
                 Correo
@@ -26,19 +23,13 @@
             <div class="alert alert-danger mb-2" [hidden]="name.valid || email.valid "> 
               <span *ngIf="email.valid">email es obligatorio</span>
               <span *ngIf="email.valid ">email es validoo</span> 
-                        </div>
-                        
-        
-        <!-- </div>  -->
+                        </div>       
     </div>
-    
-
         <button class="btn btn-primary" [disabled]="formUser.invalid">Enviar</button>
     </form>
     </div>
     
-    <!-- {{email.value}} <br>
-{{email.errors | json}} -->
+ 
 </div>
 
 {{formUser.get('email')?.value}}

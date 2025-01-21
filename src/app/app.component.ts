@@ -8,19 +8,25 @@ import { Products } from './models/products';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'yoapi';
-http = inject(HttpClient)
-products: Products[]=[];
+//   title = 'yoapi';
+
+// http = inject(HttpClient)
+// products: Products[]=[];
 
 
-ngOnInit(){
-this.http.get<Products[]>('https://api.escuelajs.co/api/v1/products')
-.subscribe((data)=> {
-this.products= data;
-console.log(data);
+// ngOnInit(){
+// this.http.get<Products[]>('https://api.escuelajs.co/api/v1/products')
+// .subscribe((data)=> {
+// this.products= data;
+// console.log(data);
 
-})
+// })
 
-}
+// }
+
+
+title = 'yoapi';
+
+
 
 }

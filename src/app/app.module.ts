@@ -11,12 +11,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReadKeyExpr } from '@angular/compiler';
 import { Formulario3Component } from './formulario3/formulario3.component';
+import { ChildrenComponent } from './children/children.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VistaproductComponent,
-    Formulario3Component
+    Formulario3Component,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule,
